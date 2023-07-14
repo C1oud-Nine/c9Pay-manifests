@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: auth
-          image: authservice:4
+          image: fosong98/authservice:4
           ports:
             - containerPort: 8081
