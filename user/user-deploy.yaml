@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: auth-deployment
+  name: user-deployment
   labels:
-    app: auth
+    app: user
 spec:
   replicas: 2
   selector:
     matchLabels:
-      app: auth
+      app: user
   template:
     metadata:
       labels:
-        app: auth
+        app: user
     spec:
       containers:
-        - name: auth
-          image: fosong98/authservice:5
+        - name: user
+          image: fosong98/userservice:5
           ports:
-            - containerPort: 8081
+            - containerPort: 8083
