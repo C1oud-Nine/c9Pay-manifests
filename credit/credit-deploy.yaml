@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: credit
-          image: fosong98/creditservice:5
+          image: fosong98/creditservice:2
           ports:
             - containerPort: 8082
