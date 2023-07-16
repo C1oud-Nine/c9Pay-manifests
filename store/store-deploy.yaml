@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: store
-          image: fosong98/storeservice:5
+          image: fosong98/authservice:3
           ports:
             - containerPort: 8084
