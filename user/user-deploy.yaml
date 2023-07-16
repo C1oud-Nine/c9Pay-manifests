@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
         - name: user
-          image: fosong98/userservice:4
+          image: fosong98/userservice:6
           ports:
             - containerPort: 8083
