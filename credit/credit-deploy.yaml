@@ -15,7 +15,13 @@ spec:
         app: credit
     spec:
       containers:
-        - name: credit
+      - env:
+        - name: jasypt.encryptor.password
+          valueFrom:
+            configMapKeyRef:
+              key: user.jasypt.encryptor.password
+              name: cloudnine-env
+        name: credit
           image: fosong98/creditservice:2
           ports:
             - containerPort: 8082
