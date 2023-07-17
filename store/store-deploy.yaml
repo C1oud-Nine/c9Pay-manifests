@@ -19,7 +19,7 @@ spec:
         - name: jasypt.encryptor.password
           valueFrom:
           configMapKeyRef:
-            key: user.jasypt.encryptor.password
+            key: store.jasypt.encryptor.password
             name: cloudnine-env
         name: store
         image: fosong98/storeservice:3
