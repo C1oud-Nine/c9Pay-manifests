@@ -15,7 +15,13 @@ spec:
         app: user
     spec:
       containers:
-        - name: user
-          image: fosong98/userservice:7
-          ports:
-            - containerPort: 8083
+      - env:
+          - name: jasypt.encryptor.password
+            valueFrom:
+              configMapKeyRef:
+                key: user.jasypt.encryptor.password
+                name: cloudnine-env
+        name: user
+        image: fosong98/userservice:7
+        ports:
+        - containerPort: 8083
