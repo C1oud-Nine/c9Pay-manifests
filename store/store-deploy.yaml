@@ -15,7 +15,13 @@ spec:
         app: store
     spec:
       containers:
-        - name: store
-          image: fosong98/storeservice:3
-          ports:
-            - containerPort: 8084
+      - env:
+        - name: jasypt.encryptor.password
+          valueFrom:
+          configMapKeyRef:
+            key: user.jasypt.encryptor.password
+            name: cloudnine-env
+        name: store
+        image: fosong98/storeservice:3
+        ports:
+        - containerPort: 8084
