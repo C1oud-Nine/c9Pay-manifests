@@ -22,6 +22,6 @@ spec:
               key: store.jasypt.encryptor.password
               name: cloudnine-env
         name: store
-        image: fosong98/storeservice:3
+        image: fosong98/storeservice:5
         ports:
         - containerPort: 8084
