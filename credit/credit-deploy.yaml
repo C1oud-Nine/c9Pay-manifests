@@ -19,7 +19,7 @@ spec:
         - name: jasypt.encryptor.password
           valueFrom:
             configMapKeyRef:
-              key: user.jasypt.encryptor.password
+              key: credit.jasypt.encryptor.password
               name: cloudnine-env
         name: credit
         image: fosong98/creditservice:4
