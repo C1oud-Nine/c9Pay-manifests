@@ -15,7 +15,13 @@ spec:
         app: auth
     spec:
       containers:
-        - name: auth
-          image: fosong98/authservice:5
-          ports:
-            - containerPort: 8081
+        - env:
+          - name: management.zipkin.tracing.endpoint
+            valueFrom:
+              configMapKeyRef:
+                key: ZIPKIN_URI
+                name: cloudnine-env
+          name: auth
+            image: fosong98/authservice:5
+            ports:
+              - containerPort: 8081
