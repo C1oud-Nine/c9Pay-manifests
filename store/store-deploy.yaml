@@ -21,6 +21,11 @@ spec:
             configMapKeyRef:
               key: store.jasypt.encryptor.password
               name: cloudnine-env
+        - name: management.zipkin.tracing.endpoint
+          valueFrom:
+            configMapKeyRef:
+              key: ZIPKIN_URI
+              name: cloudnine-env
         name: store
         image: fosong98/storeservice:5
         ports:
