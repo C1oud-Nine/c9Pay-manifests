@@ -26,6 +26,11 @@ spec:
             configMapKeyRef:
               key: ZIPKIN_URI
               name: cloudnine-env
+        - name: AUTH_SERVICE_URI
+          valueFrom:
+            configMapKeyRef:
+              key: AUTH_SERVICE_URI
+              name: cloudnine-env
         name: store
         image: fosong98/storeservice:n
         ports:
