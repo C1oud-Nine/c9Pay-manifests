@@ -22,6 +22,6 @@ spec:
                 key: ZIPKIN_URI
                 name: cloudnine-env
           name: auth
-          image: fosong98/authservice:5
+          image: fosong98/authservice:n
           ports:
             - containerPort: 8081
