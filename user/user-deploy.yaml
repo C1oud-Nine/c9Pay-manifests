@@ -16,16 +16,16 @@ spec:
     spec:
       containers:
       - env:
-          - name: jasypt.encryptor.password
-            valueFrom:
-              configMapKeyRef:
-                key: user.jasypt.encryptor.password
-                name: cloudnine-env
-          - name: management.zipkin.tracing.endpoint
-            valueFrom:
-              configMapKeyRef:
-                key: ZIPKIN_URI
-                name: cloudnine-env
+        - name: jasypt.encryptor.password
+          valueFrom:
+            configMapKeyRef:
+              key: user.jasypt.encryptor.password
+              name: cloudnine-env
+        - name: management.zipkin.tracing.endpoint
+          valueFrom:
+            configMapKeyRef:
+              key: ZIPKIN_URI
+              name: cloudnine-env
         name: user
         image: fosong98/userservice:9
         ports:
