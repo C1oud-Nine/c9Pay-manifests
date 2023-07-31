@@ -27,6 +27,6 @@ spec:
               key: ZIPKIN_URI
               name: cloudnine-env
         name: credit
-        image: fosong98/creditservice:4
+        image: fosong98/creditservice:t1
         ports:
         - containerPort: 8082
