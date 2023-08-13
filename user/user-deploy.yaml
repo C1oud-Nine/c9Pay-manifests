@@ -36,6 +36,11 @@ spec:
             configMapKeyRef:
               key: CREDIT_SERVICE_URI
               name: cloudnine-env
+        - name: eureka.client.service-url.defaultZone
+          valueFrom:
+            configMapKeyRef:
+              key: EUREKA_URI
+              name: cloudnine-env
         name: user
         image: fosong98/userservice:0.0.1
         ports:
