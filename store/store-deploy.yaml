@@ -40,6 +40,7 @@ spec:
           valueFrom:
             configMapKeyRef:
               key: CREDIT_SERVICE_URI
+              name: cloudnine-env
         name: store
         image: fosong98/storeservice:0.0.1
         ports:
