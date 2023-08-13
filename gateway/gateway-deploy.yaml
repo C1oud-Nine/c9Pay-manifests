@@ -1,0 +1,32 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: gateway-deployment
+  labels:
+    app: gateway
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: gateway
+  template:
+    metadata:
+      labels:
+        app: gateway
+    spec:
+      containers:
+        - env:
+          - name: management.zipkin.tracing.endpoint
+            valueFrom:
+              configMapKeyRef:
+                key: ZIPKIN_URI
+                name: cloudnine-env
+          - name: eureka.client.service-url.defaultZone
+            valueFrom:
+              configMapKeyRef:
+                key: EUREKA_URI
+                name: cloudnine-env
+          name: gateway
+          image: fosong98/gateway:0.0.1
+          ports:
+            - containerPort: 8000
