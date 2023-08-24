@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: webpage
-        image: fosong98/website:0.0.6
+        image: fosong98/website:0.0.8
         ports:
         - containerPort: 80
