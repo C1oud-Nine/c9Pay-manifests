@@ -47,6 +47,6 @@ spec:
               key: EUREKA_URI
               name: cloudnine-env
         name: store
-        image: fosong98/storeservice:0.0.5
+        image: fosong98/storeservice:0.0.6
         ports:
         - containerPort: 8084
