@@ -16,6 +16,11 @@ spec:
     spec:
       containers:
         - env:
+          - name: jasypt.encryptor.password
+            valueFrom:
+              configMapKeyRef:
+                key: USER_JASYPT_KEY
+                name: cloudnine-env
           - name: management.zipkin.tracing.endpoint
             valueFrom:
               configMapKeyRef:
