@@ -26,21 +26,6 @@ spec:
             configMapKeyRef:
               key: ZIPKIN_URI
               name: cloudnine-env
-        - name: AUTH_SERVICE_URI
-          valueFrom:
-            configMapKeyRef:
-              key: AUTH_SERVICE_URI
-              name: cloudnine-env
-        - name: USER_SERVICE_URI
-          valueFrom:
-            configMapKeyRef:
-              key: USER_SERVICE_URI
-              name: cloudnine-env
-        - name: CREDIT_SERVICE_URI
-          valueFrom:
-            configMapKeyRef:
-              key: CREDIT_SERVICE_URI
-              name: cloudnine-env
         - name: eureka.client.service-url.defaultZone
           valueFrom:
             configMapKeyRef:
