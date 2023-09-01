@@ -32,6 +32,6 @@ spec:
                 key: EUREKA_URI
                 name: cloudnine-env
           name: auth
-          image: fosong98/authservice:23
+          image: fosong98/authservice:0.0.25
           ports:
             - containerPort: 8081
