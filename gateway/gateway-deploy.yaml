@@ -27,6 +27,6 @@ spec:
                 key: EUREKA_URI
                 name: cloudnine-env
           name: gateway
-          image: fosong98/gateway:0.0.3
+          image: fosong98/gateway:0.0.4
           ports:
             - containerPort: 8000
