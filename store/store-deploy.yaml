@@ -31,6 +31,8 @@ spec:
             configMapKeyRef:
               key: EUREKA_URI
               name: cloudnine-env
+        - name: spring.profiles.active
+            value: "dev"
         name: store
         image: fosong98/storeservice:0.0.11
         ports:
