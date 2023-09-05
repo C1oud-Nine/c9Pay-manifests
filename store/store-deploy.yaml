@@ -32,7 +32,7 @@ spec:
               key: EUREKA_URI
               name: cloudnine-env
         - name: spring.profiles.active
-            value: "dev"
+          value: "dev"
         name: store
         image: fosong98/storeservice:0.0.12
         ports:
