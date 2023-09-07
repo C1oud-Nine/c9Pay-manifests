@@ -34,6 +34,6 @@ spec:
         - name: spring.profiles.active
           value: "dev"
         name: store
-        image: fosong98/storeservice:0.0.16
+        image: fosong98/storeservice:0.0.18
         ports:
         - containerPort: 8084
