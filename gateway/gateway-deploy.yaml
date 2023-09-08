@@ -26,6 +26,11 @@ spec:
               configMapKeyRef:
                 key: EUREKA_URI
                 name: cloudnine-env
+          - name: jasypt.encryptor.password
+            valueFrom:
+              configMapKeyRef:
+                key: GATEWAY_JASYPT_KEY
+                name: cloudnine-env
           name: gateway
           image: fosong98/gateway:0.0.6
           ports:
