@@ -32,6 +32,6 @@ spec:
               key: EUREKA_URI
               name: cloudnine-env
         name: credit
-        image: fosong98/creditservice:0.0.7
+        image: fosong98/creditservice:0.0.8
         ports:
         - containerPort: 8082
