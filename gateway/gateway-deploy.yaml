@@ -32,6 +32,6 @@ spec:
                 key: GATEWAY_JASYPT_KEY
                 name: cloudnine-env
           name: gateway
-          image: fosong98/gateway:0.0.11
+          image: fosong98/gateway:0.0.13
           ports:
             - containerPort: 8000
