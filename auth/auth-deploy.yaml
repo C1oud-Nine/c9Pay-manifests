@@ -42,15 +42,15 @@ spec:
           image: fosong98/authservice:0.0.29
           ports:
             - containerPort: 8081
-          readinessProbe:
-            httpGet:
-              path: /actuator/health/readiness
-              port: 8081
-            initialDelaySeconds: 10
-            periodSeconds: 20
-          livenessProbe:
-            httpGet:
-              path: /actuator/health/liveness
-              port: 8081
-            initialDelaySeconds: 20
-            periodSeconds: 20
+#          readinessProbe:
+#            httpGet:
+#              path: /actuator/health/readiness
+#              port: 8081
+#            initialDelaySeconds: 10
+#            periodSeconds: 20
+#          livenessProbe:
+#            httpGet:
+#              path: /actuator/health/liveness
+#              port: 8081
+#            initialDelaySeconds: 20
+#            periodSeconds: 20
