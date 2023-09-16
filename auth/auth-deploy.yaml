@@ -16,7 +16,7 @@ spec:
       containers:
         - resources:
             requests:
-              cpu: 50m
+              cpu: 10m
             limits:
               cpu: 1000m
           env:
