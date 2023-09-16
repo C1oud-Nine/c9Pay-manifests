@@ -17,7 +17,9 @@ spec:
       containers:
         - resources:
             requests:
-              cpu: 0.02
+              cpu: 2m
+            limits:
+              cpu: 10m
           env:
           - name: jasypt.encryptor.password
             valueFrom:
@@ -52,26 +54,3 @@ spec:
               port: 8081
             initialDelaySeconds: 20
             periodSeconds: 20
-
----
-apiVersion: autoscaling/v2
-kind: HorizontalPodAutoscaler
-metadata:
-  name: auth-boot-hpa
-  labels:
-    app: auth-boot-hpa
-spec:
-  scaleTargetRef:
-    apiVersion: apps/v1
-    kind: Deployment
-    name: auth-deployment
-  minReplicas: 1
-  maxReplicas: 3
-
-  metrics:
-  - type: Resource
-    resource:
-      name: cpu
-      target:
-        AverageUtilization: 50
-        type: Utilization
