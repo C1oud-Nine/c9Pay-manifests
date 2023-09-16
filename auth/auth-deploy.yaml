@@ -39,7 +39,7 @@ spec:
           - name: spring.profiles.active
             value: "dev"
           name: auth
-          image: fosong98/authservice:0.0.29
+          image: fosong98/authservice:0.0.30
           ports:
             - containerPort: 8081
 #          readinessProbe:
