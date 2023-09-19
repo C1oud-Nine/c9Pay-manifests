@@ -16,9 +16,9 @@ spec:
       containers:
         - resources:
             requests:
-              cpu: 10m
+              cpu: 100m
             limits:
-              cpu: 1000m
+              cpu: 500m
           env:
           - name: jasypt.encryptor.password
             valueFrom:
