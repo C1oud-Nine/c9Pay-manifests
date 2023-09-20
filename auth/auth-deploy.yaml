@@ -49,9 +49,9 @@ spec:
               port: 8081
             initialDelaySeconds: 30
             periodSeconds: 20
-          livenessProbe:
-            httpGet:
-              path: /actuator/health/liveness
-              port: 8081
-            initialDelaySeconds: 30
-            periodSeconds: 20
+#          livenessProbe:
+#            httpGet:
+#              path: /actuator/health/liveness
+#              port: 8081
+#            initialDelaySeconds: 30
+#            periodSeconds: 20
