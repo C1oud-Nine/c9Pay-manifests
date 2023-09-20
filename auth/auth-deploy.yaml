@@ -16,9 +16,11 @@ spec:
       containers:
         - resources:
             requests:
-              cpu: 100m
+              cpu: 200m
+              memory: 300Mi
             limits:
-              cpu: 100m
+              cpu: 200m
+              memory: 300Mi
           env:
           - name: jasypt.encryptor.password
             valueFrom:
@@ -47,11 +49,11 @@ spec:
             httpGet:
               path: /actuator/health/readiness
               port: 8081
-            initialDelaySeconds: 10
+            initialDelaySeconds: 100
             periodSeconds: 20
           livenessProbe:
             httpGet:
               path: /actuator/health/liveness
               port: 8081
-            initialDelaySeconds: 20
+            initialDelaySeconds: 100
             periodSeconds: 20
