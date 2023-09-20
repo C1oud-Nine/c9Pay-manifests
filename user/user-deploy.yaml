@@ -49,7 +49,7 @@ spec:
             path: /actuator/health/readiness
             port: 8083
           initialDelaySeconds: 60
-          periodSeconds: 20
+          periodSeconds: 60
 #        livenessProbe:
 #          httpGet:
 #            path: /actuator/health/liveness
