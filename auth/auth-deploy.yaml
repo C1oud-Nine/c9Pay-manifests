@@ -16,9 +16,9 @@ spec:
       containers:
         - resources:
             requests:
-              memory: 250Mi
+              memory: 400Mi
             limits:
-              memory: 250Mi
+              memory: 400Mi
           env:
           - name: jasypt.encryptor.password
             valueFrom:
@@ -38,7 +38,7 @@ spec:
           - name: spring.profiles.active
             value: "dev"
           - name: JAVA_OPS
-            value: -XX:+UseContainerSupport
+            value: "-XX:+UseContainerSupport"
           name: auth
           image: fosong98/authservice:0.0.31
           ports:

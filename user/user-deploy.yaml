@@ -32,7 +32,7 @@ spec:
               key: EUREKA_URI
               name: cloudnine-env
         - name: JAVA_OPS
-          value: -XX:+UseContainerSupport
+          value: "-XX:+UseContainerSupport"
         name: user
         image: fosong98/userservice:0.0.40
         ports:
@@ -40,9 +40,9 @@ spec:
 
         resources:
           requests:
-            memory: 250Mi
+            memory: 400Mi
           limits:
-            memory: 250Mi
+            memory: 400Mi
 
 #        readinessProbe:
 #          httpGet:

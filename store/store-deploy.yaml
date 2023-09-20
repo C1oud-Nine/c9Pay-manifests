@@ -34,7 +34,7 @@ spec:
         - name: spring.profiles.active
           value: "dev"
         - name: JAVA_OPS
-          value: -XX:+UseContainerSupport
+          value: "-XX:+UseContainerSupport"
         name: store
         image: fosong98/storeservice:0.0.21
         ports:
@@ -42,9 +42,9 @@ spec:
 
         resources:
           requests:
-            memory: 250Mi
+            memory: 400Mi
           limits:
-            memory: 250Mi
+            memory: 400Mi
 
 #        readinessProbe:
 #          httpGet:
