@@ -33,7 +33,7 @@ spec:
         - name: JAVA_OPS
           value: "-XX:+UseContainerSupport"
         name: credit
-        image: fosong98/creditservice:0.0.10
+        image: fosong98/creditservice:0.0.1
         ports:
         - containerPort: 8082
 
