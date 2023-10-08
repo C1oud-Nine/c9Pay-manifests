@@ -41,7 +41,7 @@ spec:
           - name: JAVA_OPS
             value: "-XX:+UseContainerSupport"
           name: auth
-          image: fosong98/authservice:1.0.6
+          image: fosong98/authservice:1.0.7
           ports:
             - containerPort: 8081
           readinessProbe:
