@@ -33,7 +33,7 @@ spec:
         - name: JAVA_OPS
           value: "-XX:+UseContainerSupport"
         name: user
-        image: fosong98/userservice:1.0.2
+        image: fosong98/userservice:1.0.3
         ports:
         - containerPort: 8083
 
