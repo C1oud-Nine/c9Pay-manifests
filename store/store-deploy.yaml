@@ -35,7 +35,7 @@ spec:
         - name: JAVA_OPS
           value: "-XX:+UseContainerSupport"
         name: store
-        image: fosong98/storeservice:1.0.4
+        image: fosong98/storeservice:1.0.5
         ports:
         - containerPort: 8084
 
